@@ -1,34 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.main {
+.hero{
   padding: 5rem 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/Relish_Food_Lovers_Tent.jpg") ;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(3, 3, 3, 0.3)), url("/winery.png");
     background-size: cover;
     background-clip: text;
     background-position: center;
+  width: 100vw;
+  height: 60vh;
+  
 
   h3 {
-    font-size: 10rem;
-    
+    font-size: 3rem;
+    text-align: center;
     color: transparent;
-    font-family: 'Luckiest guy', cursive;
+    font-family: 'Elsie', cursive;
   }
 }
 
+.slider{
+background-color: #F7F7F7;
+padding: 2rem 1rem;
+position: relative;
+margin: 3rem 0;
 
+&::before {
+  content: "";
+  position: absolute;
+  top: -3vh;
+  left: 0;
+  height: 5vh;
+  width: 100%;
+  background-image: url("/sponsorswave.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+}
+
+
+#slider_slide {
+  height: 30vh;
+  position: relative;
+}
+
+#slider_slide h3 {
+position: absolute;
+bottom: 0;
+right: 0;
+z-index: 99;
+background-color: white;
+padding: 1rem 2rem;
+margin: 0;
+}
+
+.promo {
+  font-family: 'Montserrat', sans-serif;
+  color: #000033;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.promo h2{
+  font-weight: bold;
+}
 
