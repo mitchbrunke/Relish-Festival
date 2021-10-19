@@ -1,20 +1,16 @@
 //imports
 import { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
 //sanity
-import { usePreviewSubscription, urlFor, PortableText } from "../lib/sanity";
+import { PortableText } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
 
 //components
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
-
-//keen slider
-import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react";
+import PromoSlider from "../components/Promoslider";
 
 //Get Sanity Data - using GROC
 //header & footer data on each page, it is wet but next.js won't let you fetch on _app.js
@@ -32,22 +28,8 @@ const homeDataQuery = `*[_type == "home"]{
     sliderItem
   }`;
 
-//the homepage function
 export default function Home({ brandingData, homeData, headerData }) {
   //state
-  const [sliderRef, slider] = useKeenSlider({
-    slidesPerView: 1,
-    loop: true,
-
-    breakpoints: {
-      "(min-width: 500px)": {
-        slidesPerView: 3,
-      },
-    },
-  });
-
-  //slide number generator
-  let slideNumber = 0;
 
   return (
     <div className={styles.container}>
@@ -61,37 +43,18 @@ export default function Home({ brandingData, homeData, headerData }) {
 
       <Nav brandingData={brandingData} headerData={headerData} />
 
-      <main className={styles.hero}>
+      <section className={styles.hero}>
         <h3>{homeData[0].heading}</h3>
         <button>Buy Tickets</button>
-      </main>
+      </section>
+
+      <hr />
 
       <section className={styles.promo}>
         <PortableText blocks={homeData[0].text} />
       </section>
 
-      <section className={styles.slider}>
-        <div ref={sliderRef} className={"keen-slider"}>
-          {homeData[0].sliderItem.map((item) => (
-            <div
-              className={
-                "keen-slider__slide" + " " + `number-slide${(slideNumber += 1)}`
-              }
-              id={styles.slider_slide}
-              key={item._key}
-            >
-              {console.log(item.promo_image)}
-              <h3>{item.prome_name}</h3>
-              {item.promo_image.asset && (
-                <Image
-                  src={urlFor(item.promo_image).url()}
-                  layout="fill"
-                ></Image>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
+      <PromoSlider homeData={homeData} />
 
       <Footer />
     </div>

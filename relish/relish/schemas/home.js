@@ -8,14 +8,15 @@ export default {
     {
       name: "title",
       title: "Page Title",
-      description: "Do not leave this blank, crucial for SEO",
+      description:
+        "Do not leave this blank, crucial for SEO. Shows on Google but not on the page",
       type: "string",
     },
     {
       name: "meta",
       title: "meta description",
       description:
-        "Do not leave this blank, crucial for SEO, between 50–160 characters",
+        "Do not leave this blank, crucial for SEO, between 50–160 characters. Shows on Google but not on the page",
       type: "text",
       validation: (Rule) =>
         Rule.max(150).warning(
@@ -25,6 +26,7 @@ export default {
     {
       name: "heading",
       title: "Main Heading",
+      description: "Heading you see in the hero section.",
       type: "string",
     },
     {
@@ -34,8 +36,9 @@ export default {
       of: [{ type: "block" }],
     },
     {
-      title: "Promo Slider",
+      title: "Program Slider",
       name: "sliderItem",
+      description: "Add in as many as you like.",
       type: "array",
       of: [
         {
@@ -53,6 +56,8 @@ export default {
             },
             {
               title: "Page Link",
+              description:
+                "If this is to the relish website just add in /pagename. e.g If you want to link to the program page it will be /program. If it is to an external site, it will be https://website.com/",
               name: "promo_link",
               type: "string",
             },

@@ -10,7 +10,7 @@
     background-clip: text;
     background-position: center;
   width: 100vw;
-  height: 60vh;
+  height: 50vh;
   
 
   h3 {
@@ -21,43 +21,7 @@
   }
 }
 
-.slider{
-background-color: #F7F7F7;
-padding: 2rem 1rem;
-position: relative;
-margin: 3rem 0;
-
-&::before {
-  content: "";
-  position: absolute;
-  top: -3vh;
-  left: 0;
-  height: 5vh;
-  width: 100%;
-  background-image: url("/sponsorswave.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-}
-
-
-#slider_slide {
-  height: 30vh;
-  position: relative;
-}
-
-#slider_slide h3 {
-position: absolute;
-bottom: 0;
-right: 0;
-z-index: 99;
-background-color: white;
-padding: 1rem 2rem;
-margin: 0;
-}
-
 .promo {
-  font-family: 'Montserrat', sans-serif;
   color: #000033;
   display: flex;
   flex-direction: column;
@@ -66,9 +30,9 @@ margin: 0;
   text-align: center;
   width: 90vw;
   margin: 0 auto;
+  padding-top: 2rem;
 }
 
 .promo h2{
   font-weight: bold;
 }
-

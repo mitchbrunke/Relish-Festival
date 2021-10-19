@@ -1,0 +1,50 @@
+.slider{
+    background-color: #F7F7F7;
+    padding:  2rem 1rem;
+    position: relative;
+    margin: 3rem 0;
+    
+    h3 {
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 1rem 0;
+    }
+    
+    p {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      padding-right: 3rem;
+    }
+    
+    #arrow {
+      width: 10vw;
+      position: absolute;
+      right: 1px;
+      bottom: 1px;
+      animation: example 1s infinite alternate;
+    }
+    }
+    
+    
+    #slider_slide {
+      height: 30vh;
+      position: relative;
+    }
+    
+    #slider_slide h3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #F7F7F7;
+    padding: 1rem 2rem;
+    margin: 0;
+    }
+
+    
+    @keyframes example {
+      from {right: 1px;}
+      to {right: 1rem;}
+    }

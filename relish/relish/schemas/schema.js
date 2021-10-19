@@ -12,6 +12,7 @@ import author from "./author";
 import home from "./home";
 import branding from "./branding";
 import header from "./header";
+import sponsors from "./sponsors";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,6 +26,7 @@ export default createSchema({
     branding,
     header,
     home,
+    sponsors,
     post,
     author,
     category,
