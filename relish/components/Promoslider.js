@@ -17,8 +17,11 @@ const PromoSlider = ({ homeData }) => {
     loop: true,
 
     breakpoints: {
-      "(min-width: 500px)": {
-        slidesPerView: 3,
+      "(min-width: 700px)": {
+        slidesPerView: 2,
+      },
+      "(min-width: 1000px)": {
+        slidesPerView: 2.5,
       },
     },
   });
@@ -38,8 +41,6 @@ const PromoSlider = ({ homeData }) => {
             id={styles.slider_slide}
             key={item._key}
           >
-            {console.log(item.promo_link)}
-
             <Link href={item.promo_link}>
               <a>
                 <h3>{item.prome_name}</h3>

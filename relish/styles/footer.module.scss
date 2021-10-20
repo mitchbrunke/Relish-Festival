@@ -1,0 +1,54 @@
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+}
+
+.footerHead {
+    width: 45vw;
+}
+
+.sponsor {
+    width: 45vw;
+    height: auto;
+    padding: 1rem;
+}
+
+.btm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+        width: 25vw;
+        height: auto;
+    }
+
+    p {
+        font-size: .5rem;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+
+.btm {
+    .logo {
+        width: 10vw;
+    }
+}
+
+}
+
+@media only screen and (min-width: 1000px) {
+    .btm {
+        .logo {
+            max-width: 8rem;
+        }
+    }
+    
+  }
+
+

@@ -19,9 +19,9 @@ const sponsorDataQuery = `*[_type == "sponsor"] | order(order asc) {
   alt
     }`;
 
-const About = ({ sponsorData, brandingData, headerData }) => {
+const Contact = ({ sponsorData, brandingData, headerData }) => {
   return (
-    <div className="about">
+    <div className="contact">
       <Nav brandingData={brandingData} headerData={headerData} />
       <h3>Content here</h3>
       <Footer sponsorData={sponsorData} brandingData={brandingData} />
@@ -40,4 +40,4 @@ export async function getStaticProps() {
   return { props: { brandingData, headerData, sponsorData } };
 }
 
-export default About;
+export default Contact;

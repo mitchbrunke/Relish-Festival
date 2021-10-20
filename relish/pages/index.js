@@ -28,7 +28,18 @@ const homeDataQuery = `*[_type == "home"]{
     sliderItem
   }`;
 
-export default function Home({ brandingData, homeData, headerData }) {
+const sponsorDataQuery = `*[_type == "sponsor"] | order(order asc) {
+    name, 
+  sponsorLogo, 
+  alt
+    }`;
+
+export default function Home({
+  brandingData,
+  homeData,
+  headerData,
+  sponsorData,
+}) {
   //state
 
   return (
@@ -56,7 +67,7 @@ export default function Home({ brandingData, homeData, headerData }) {
 
       <PromoSlider homeData={homeData} />
 
-      <Footer />
+      <Footer sponsorData={sponsorData} brandingData={brandingData} />
     </div>
   );
 }
@@ -68,6 +79,7 @@ export async function getStaticProps() {
   const brandingData = await getClient().fetch(brandingDataQuery);
   const homeData = await getClient().fetch(homeDataQuery);
   const headerData = await getClient().fetch(headerDataQuery);
+  const sponsorData = await getClient().fetch(sponsorDataQuery);
 
-  return { props: { brandingData, homeData, headerData } };
+  return { props: { brandingData, homeData, headerData, sponsorData } };
 }

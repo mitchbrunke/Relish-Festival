@@ -1,3 +1,16 @@
+#headerNotice {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+  color: white;
+  background-color: #EB1C22;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .navContainer {
     margin: 0 auto;
     display: flex;
@@ -8,17 +21,8 @@
     padding: 1rem; 
   }
 
-  #headerNotice {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 7vh;
-    color: white;
-    background-color: #EB1C22;
-    font-size: 1.2rem;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
+  .navBtn {
+    display: none;
   }
   
   .close_nav {
@@ -26,19 +30,31 @@
     top: 3vh;
     right: 5vh;
   }
+
+  .close_toggle {
+    
+    z-index: 999;
+    position: absolute;
+    top: 3vh;
+    right: 5vw;
+    border: #EB1C22 1px solid;
+    border-radius: 10px;
+    padding: 0 .5rem ;
+  }
   
   .nav ul {
     transform: translateX(100vw);
+    margin-top: -5vh;
   }
   
   .open_nav ul {
     border: 2px solid #acacac;
     background: white;
     width: 70vw;
-    height: 99vh;
+    height: 90vh;
     transform: translateX(1px);
     position: absolute;
-    top: 1px;
+    top: 5vh;
     right: 1px;
     z-index: 99;
     display: flex;
@@ -51,6 +67,7 @@
   .open_nav li {
     padding: 2rem 0;
   }
+
   
   .logo {
     padding: 0;
@@ -65,16 +82,36 @@
     display: none;
   }
 
-  @media only screen and (min-width: 600px) {
-    .nav ul {
+  @media only screen and (min-width: 700px) {
+
+    .nav {
+      width: 70vw;
+      align-items: center;
       display: flex;
+
+      ul {
+        display: flex;
       position: unset;
       flex-direction: row;
-      width: 25vw;
+      width: 70vw;
       margin: 0 auto;
       justify-content: space-evenly;
-      align-items: center;
+      align-items: flex-start;
       transform: translateX(0vw);
+      }
+
+      .navBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        width: 10vh;
+      }
+     }
+
+
+    .close_toggle {
+    display: none;
     }
   
     .close_nav {
@@ -94,3 +131,24 @@
     }
   }
   
+
+  @media only screen and (min-width: 1000px) {
+    #headerNotice {
+     
+      height: 5vh;
+      
+    }
+
+    .nav {
+     max-width: 50rem;
+    }
+
+    .navContainer {
+      max-width: 85rem;
+    }
+
+    .logo {
+      max-width: 8.25rem;
+    }
+    
+  }
