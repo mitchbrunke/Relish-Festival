@@ -19,9 +19,15 @@ const PromoSlider = ({ homeData }) => {
     breakpoints: {
       "(min-width: 700px)": {
         slidesPerView: 2,
+        spacing: 15,
       },
       "(min-width: 1000px)": {
-        slidesPerView: 2.5,
+        slidesPerView: 3,
+        spacing: 25,
+      },
+      "(min-width: 1500px)": {
+        slidesPerView: 4,
+        spacing: 35,
       },
     },
   });
@@ -32,7 +38,7 @@ const PromoSlider = ({ homeData }) => {
   return (
     <section className={styles.slider}>
       <h3>Program</h3>
-      <div ref={sliderRef} className={"keen-slider"}>
+      <div ref={sliderRef} id={styles.slideContain} className={"keen-slider"}>
         {homeData[0].sliderItem.map((item) => (
           <div
             className={

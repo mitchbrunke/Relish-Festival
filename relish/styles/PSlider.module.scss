@@ -25,15 +25,55 @@
       bottom: 1px;
       animation: example 1s infinite alternate;
     }
+
+    @media only screen and (min-width: 700px) {
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        padding-right: 0;
+        padding-right: 5rem;
+      }
     }
+
+    @media screen and (min-width: 1000px) {
+
+      p {
+        padding-right: 3rem;
+      }
+     
+        #arrow {
+          width: 2rem;
+          position: absolute;
+          right: 1px;  
+        }
+
+    }
+
+    @media screen and (min-width:1500px) {
+
+      p {
+        margin: auto;
+        width: 80rem;
+        padding-right: 3rem;
+      }
+
+      #slideContain {
+        max-width: 80rem;
+        margin: auto;
+      }
+    }
+
+  }
     
     
     #slider_slide {
       height: 30vh;
       position: relative;
-    }
     
-    #slider_slide h3 {
+   h3 {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -43,6 +83,21 @@
     margin: 0;
     }
 
+    @media only screen and (min-width: 700px) {
+
+      h3 {
+        font-size: 1rem;
+      }
+
+    }
+
+    @media only screen and (min-width: 1000px) {
+    max-height: 15rem;
+
+    
+     
+    }
+  }
     
     @keyframes example {
       from {right: 1px;}

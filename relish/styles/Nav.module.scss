@@ -5,92 +5,88 @@
   align-items: center;
   height: 7vh;
   color: white;
-  background-color: #EB1C22;
+  background-color: #eb1c22;
   font-size: 1.2rem;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .navContainer {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-    align-items: center;
-    padding: 1rem; 
-  }
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
+  padding: 1rem;
+}
 
-  .navBtn {
-    display: none;
-  }
-  
-  .close_nav {
-    position: absolute;
-    top: 3vh;
-    right: 5vh;
-  }
+.navBtn {
+  display: none;
+}
 
-  .close_toggle {
-    
-    z-index: 999;
-    position: absolute;
-    top: 3vh;
-    right: 5vw;
-    border: #EB1C22 1px solid;
-    border-radius: 10px;
-    padding: 0 .5rem ;
-  }
-  
-  .nav ul {
-    transform: translateX(100vw);
-    margin-top: -5vh;
-  }
-  
-  .open_nav ul {
-    border: 2px solid #acacac;
-    background: white;
+.close_nav {
+  position: absolute;
+  top: 3vh;
+  right: 5vh;
+}
+
+.close_toggle {
+  z-index: 999;
+  position: absolute;
+  top: 3vh;
+  right: 5vw;
+  border-radius: 10px;
+  padding: 0 0.5rem;
+}
+
+.nav ul {
+  transform: translateX(100vw);
+  margin-top: -5vh;
+}
+
+.open_nav ul {
+  border: 2px solid #acacac;
+  background: white;
+  width: 70vw;
+  height: 90vh;
+  transform: translateX(1px);
+  position: absolute;
+  top: 5vh;
+  right: 1px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  z-index: 99;
+}
+
+.open_nav li {
+  padding: 2rem 0;
+}
+
+.logo {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  position: relative;
+  z-index: 99;
+  width: 25vw;
+}
+
+.contactIcon {
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .nav {
     width: 70vw;
-    height: 90vh;
-    transform: translateX(1px);
-    position: absolute;
-    top: 5vh;
-    right: 1px;
-    z-index: 99;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    padding-top: 5rem;
-   z-index: 99;
-  }
-  
-  .open_nav li {
-    padding: 2rem 0;
-  }
+    display: flex;
 
-  
-  .logo {
-    padding: 0;
-    margin: 0;
-    height: auto;
-    position: relative;
-    z-index: 99;
-    width: 25vw;
-  }
-  
-  .contactIcon {
-    display: none;
-  }
-
-  @media only screen and (min-width: 700px) {
-
-    .nav {
-      width: 70vw;
-      align-items: center;
+    ul {
       display: flex;
-
-      ul {
-        display: flex;
       position: unset;
       flex-direction: row;
       width: 70vw;
@@ -98,57 +94,57 @@
       justify-content: space-evenly;
       align-items: flex-start;
       transform: translateX(0vw);
-      }
+    }
 
-      .navBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        width: 10vh;
-      }
-     }
-
-
-    .close_toggle {
-    display: none;
-    }
-  
-    .close_nav {
-      display: none;
-    }
-  
-    .logo img {
-      width: 10vw;
-    }
-  
-    .toggle {
-      display: none;
-    }
-  
-    .contactIcon {
+    .navBtn {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      width: 10vh;
+
+      &::hover {
+        color: #eb1c22;
+        background-color: white;
+      }
     }
   }
-  
 
-  @media only screen and (min-width: 1000px) {
-    #headerNotice {
-     
-      height: 5vh;
-      
-    }
-
-    .nav {
-     max-width: 50rem;
-    }
-
-    .navContainer {
-      max-width: 85rem;
-    }
-
-    .logo {
-      max-width: 8.25rem;
-    }
-    
+  .close_toggle {
+    display: none;
   }
+
+  .close_nav {
+    display: none;
+  }
+
+  .logo img {
+    width: 10vw;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .contactIcon {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #headerNotice {
+    max-height: 3rem;
+  }
+
+  .nav {
+    max-width: 50rem;
+  }
+
+  .navContainer {
+    max-width: 85rem;
+  }
+
+  .logo {
+    max-width: 8.25rem;
+  }
+}

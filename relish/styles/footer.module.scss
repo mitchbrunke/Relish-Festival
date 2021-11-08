@@ -1,7 +1,9 @@
+.container {
+
 .sponsors {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 90vw;
     margin: auto;
@@ -15,6 +17,35 @@
     width: 45vw;
     height: auto;
     padding: 1rem;
+}
+
+@media screen and (min-width:600px) {
+.sponsors {
+    
+    width: 80vw;
+    justify-content: center;
+}
+
+.sponsor, .footerHead {
+    max-width: 13rem;
+}
+}
+
+@media screen and (min-width: 1000px) {
+    
+     .footerHead {
+        display: none;
+    }
+    }
+
+    @media screen and (min-width: 1500px) {
+    
+       .sponsors {
+           padding:8rem 0 2rem 0;
+           max-width: 70rem;   
+       }
+       }
+
 }
 
 .btm {

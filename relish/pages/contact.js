@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import InnerHeader from "../components/innerHeader";
 import Nav from "../components/Nav";
 
 //sanity
@@ -23,6 +24,7 @@ const Contact = ({ sponsorData, brandingData, headerData }) => {
   return (
     <div className="contact">
       <Nav brandingData={brandingData} headerData={headerData} />
+      <InnerHeader pageName="Contact Us" />
       <h3>Content here</h3>
       <Footer sponsorData={sponsorData} brandingData={brandingData} />
     </div>

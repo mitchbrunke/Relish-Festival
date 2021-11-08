@@ -1,25 +1,34 @@
 //imports
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Nav.module.scss";
 
 //icons
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import MenuIcon from "@mui/icons-material/Menu";
-//font awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+
 //sanity
-import { usePreviewSubscription, urlFor, PortableText } from "../lib/sanity";
-import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
+import { urlFor } from "../lib/sanity";
 
 const Nav = ({ brandingData, headerData }) => {
+  //state to detect screen width
+  const [width, setWidth] = useState("");
   //set state for Nav to open and close
   const [openNav, setNavOpen] = useState(false);
   //use router to be able to highlight the active link, a little hacky but it seems to be the better fix (Next.js things)
   const router = useRouter();
-  console.log(brandingData);
+
+  //function toggle the nav
+
+  // useEffect(() => {
+  //   setWidth(window.innerWidth);
+  // }, []);
+
+  // const navToggler = () => {
+  //   // width < 700 ? setNavOpen(!openNav) : console.log("desktop");
+  // };
 
   return (
     <>
@@ -41,12 +50,7 @@ const Nav = ({ brandingData, headerData }) => {
         </div>
 
         <nav className={openNav ? styles.open_nav : styles.nav}>
-          <ul
-            onClick={() => {
-              setNavOpen(!openNav);
-              console.log("clicked");
-            }}
-          >
+          <ul>
             <div
               className={styles.close_toggle}
               onClick={() => {
@@ -54,7 +58,13 @@ const Nav = ({ brandingData, headerData }) => {
                 console.log("clicked");
               }}
             >
-              <p>Close</p>
+              <HighlightOffIcon
+                className={styles.toggle}
+                fontSize="large"
+                onClick={() => {
+                  setNavOpen(!openNav);
+                }}
+              />
             </div>
 
             <Link href="/">
@@ -62,13 +72,13 @@ const Nav = ({ brandingData, headerData }) => {
                 <li>home</li>
               </a>
             </Link>
-            <Link href="/about">
-              <a className={router.pathname == "/about" ? "active" : ""}>
-                <li>about</li>
+            <Link href="/program">
+              <a className={router.pathname == "/program" ? "active" : ""}>
+                <li>program</li>
               </a>
             </Link>
-            <Link href="/plan">
-              <a className={router.pathname == "/plan" ? "active" : ""}>
+            <Link href="https://www.visitfrasercoast.com/">
+              <a target="_blank">
                 <li>plan your visit</li>
               </a>
             </Link>
@@ -93,7 +103,6 @@ const Nav = ({ brandingData, headerData }) => {
             fontSize="large"
             onClick={() => {
               setNavOpen(!openNav);
-              console.log("clicked");
             }}
           />
         </div>

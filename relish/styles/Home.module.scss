@@ -39,6 +39,11 @@
       font-size: 4rem;
     }
   }
+
+  @media only screen and (min-width: 1000px) {
+
+    width: 50vw;
+  }
 }
 
 .promo {
@@ -51,8 +56,26 @@
   width: 90vw;
   margin: 0 auto;
   padding-top: 2rem;
+
+  h2{
+    font-weight: bold;
+  }
+
+  @media only screen and (min-width: 1000px) {
+
+    width: 70vw;
+
+    h2{
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+
+    max-width: 65rem;
+    padding: 4rem 0;
+    
+  }
 }
 
-.promo h2{
-  font-weight: bold;
-}
+

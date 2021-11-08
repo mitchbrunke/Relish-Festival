@@ -10,6 +10,7 @@ import home from "./home";
 import branding from "./branding";
 import header from "./header";
 import sponsors from "./sponsors";
+import program from "./program";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,6 +24,7 @@ export default createSchema({
     branding,
     header,
     home,
+    program,
     sponsors,
 
     // When added to this list, object types can be used as
