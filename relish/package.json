@@ -12,6 +12,7 @@
     "@emotion/react": "^11.4.1",
     "@emotion/style": "^0.8.0",
     "@emotion/styled": "^11.3.0",
+    "@formspree/react": "^2.2.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
