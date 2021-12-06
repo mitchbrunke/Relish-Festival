@@ -30,7 +30,7 @@ const Contact = ({ sponsorData, brandingData, headerData }) => {
     return (
       <p>
         Thanks for reaching out, we will be in touch shortly! Either refresh the
-        page or head back to the homepage{" "}
+        page or head back to the homepage.{" "}
         <Link href="/contact">
           {" "}
           <a>here</a>
