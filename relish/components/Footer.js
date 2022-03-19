@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import styles from "../styles/footer.module.scss";
 //sanity
 import { urlFor } from "../lib/sanity";
+import { PortableText } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
 import { style } from "@mui/system";
 
@@ -43,6 +44,7 @@ const Footer = ({ sponsorData, brandingData }) => {
         </div>
 
         <p>&copy; Fraser Coast Tourism & Events</p>
+        <PortableText blocks={brandingData[0].Butchella} />
       </div>
     </div>
   );

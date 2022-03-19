@@ -39,5 +39,36 @@ export default {
       description: "Link to social media sites.",
       type: "string",
     },
+    {
+      name: "Butchella",
+      title: "Butchella Acknowledgment",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
+      title: "Required Forms",
+      name: "reqForms",
+      description: "Add in as many as you like.",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              title: "Form Name & Info",
+              name: "prome_name",
+              type: "string",
+            },
+            {
+              title: "Form Link",
+              description:
+                "URL for consumers to access form.",
+              name: "form_link",
+              type: "string",
+            },
+          ],
+        },
+      ],
+    },
   ],
 };

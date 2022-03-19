@@ -4,12 +4,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../public/winery.png");
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(3, 3, 3, 0.3)), url("../public/winery.png");
   background-position: right;
   background-size: cover;
+ 
 
   h3 {
+    font-size: 3rem;
+    text-align: center;
     color: white;
+    font-family: 'Elsie', cursive;
   }
 }
 
@@ -27,6 +31,7 @@
     padding: 0 1rem;
   }
 }
+
 
 @media only screen and (min-width: 700px) {
   .progItem {

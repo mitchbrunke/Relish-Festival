@@ -14,16 +14,18 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.22.3",
+    "@sanity/base": "^2.29.1",
+    "@sanity/client": "^3.2.2",
     "@sanity/core": "^2.22.3",
-    "@sanity/dashboard": "^2.23.0",
-    "@sanity/default-layout": "^2.22.5",
-    "@sanity/default-login": "^2.22.3",
+    "@sanity/dashboard": "^2.29.1",
+    "@sanity/default-layout": "^2.29.1",
+    "@sanity/default-login": "^2.29.1",
     "@sanity/desk-tool": "^2.22.5",
-    "@sanity/vision": "^2.22.3",
+    "@sanity/vision": "^2.29.1",
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
+    "sanity": "^2.20.0",
     "sanity-plugin-order-documents": "^0.0.20",
     "styled-components": "^5.2.0"
   }

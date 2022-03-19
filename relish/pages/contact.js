@@ -9,6 +9,7 @@ import { getClient } from "../lib/sanity.server";
 //formspree
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import branding from "../relish/schemas/branding";
 
 //Get Sanity Data - using GROC
 //header & footer data on each page, it is wet but next.js won't let you fetch on _app.js
@@ -39,6 +40,10 @@ const Contact = ({ sponsorData, brandingData, headerData }) => {
     );
   }
 
+  const forms = brandingData[0].reqForms;
+
+  console.log(brandingData)
+
   return (
     <div className="contact">
       <Nav brandingData={brandingData} headerData={headerData} />
@@ -65,6 +70,17 @@ const Contact = ({ sponsorData, brandingData, headerData }) => {
           Submit
         </button>
       </form>
+
+
+      <div className="vendorforms">
+        <h3>Interested in becoming a vendor or volunteer? </h3>
+        {forms.map((form) => (
+          <div className="vendorform">
+            <h4>{form.prome_name}</h4>
+            <Link href={form.form_link}>Download Form</Link>
+          </div>
+        ))}
+      </div>
 
       <Footer sponsorData={sponsorData} brandingData={brandingData} />
     </div>
