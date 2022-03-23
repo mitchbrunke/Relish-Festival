@@ -32,7 +32,6 @@ const sponsorDataQuery = `*[_type == "sponsor"] | order(order asc) {
     }`;
 
 const About = ({ sponsorData, brandingData, programData, headerData }) => {
-  console.log(programData);
   return (
     <div className="about">
       <Nav brandingData={brandingData} headerData={headerData} />
@@ -41,6 +40,7 @@ const About = ({ sponsorData, brandingData, programData, headerData }) => {
 
       {programData.map((item) => (
         <div className={styles.progItem} key={item.name}>
+          {console.log(item.name, urlFor(item.progItem).url())}
           <div className={styles.text}>
             <h3>{item.name}</h3>
             <p>
