@@ -65,6 +65,8 @@ export default function Home({
         <PortableText blocks={homeData[0].text} />
       </section>
 
+      <hr />
+
       <PromoSlider homeData={homeData} />
 
       <Footer sponsorData={sponsorData} brandingData={brandingData} />
