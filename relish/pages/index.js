@@ -56,7 +56,6 @@ export default function Home({
 
       <section className={styles.hero}>
         <h3>{homeData[0].heading}</h3>
-        <button>Buy Tickets</button>
       </section>
 
       <hr />
